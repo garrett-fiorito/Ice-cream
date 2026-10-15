@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/ice_cream_favicon.png">
+    <script src="js/ice-cream.js" defer></script>
     <title>Ice Cream Order Form</title>
 </head>
 <body>
     <div id="main">
         <h1>Ice Cream Order Form</h1>
-        <form action="#" method="get">
+        <form id="ice-cream-form" action="#" method="get" novalidate>
 
             <fieldset id="personal-info">
                 <legend>Personal Information</legend>
 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name">
+                <span id="err-name" class="error">Please enter your name.</span>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
+                <span id="err-email" class="error">Please enter an email containing @.</span>
             </fieldset>
 
             <fieldset>
@@ -34,6 +37,7 @@
                     <option value="caramel">Caramel</option>
                     <option value="mint-with-chocolate-chip">Mint with chocolate chip</option>
                 </select>
+                <span id="err-flavor" class="error">Please select a flavor.</span>
 
                 <p>Choose your cone:</p>
                 <label for="waffle-cone">
@@ -50,6 +54,7 @@
                     <input type="radio" id="cup" name="cone" value="cup">
                     Cup
                 </label>
+                <span id="err-cone" class="error">Please select a cone or cup.</span>
 
                 <p>Toppings:</p>
                 <label for="sprinkles">

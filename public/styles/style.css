@@ -67,3 +67,8 @@ input[type="email"]{
     color: white;
     font-size: 1rem;
 }
+
+.error {
+    display: none;
+    color: red;
+}
